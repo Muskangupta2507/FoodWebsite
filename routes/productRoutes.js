@@ -28,6 +28,10 @@ router.get('/products/:id' , async(req,res)=>{
 
 })
 
+router.get('/home/login',(req,res)=>{
+    res.render('login')
+});
+
 router.get('/cart',(req,res)=>{
     res.render('cart')
 });
