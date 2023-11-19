@@ -1,0 +1,25 @@
+<%- include('./partials/header') %>
+<%- include('./partials/navbar') %>
+
+<div class="row">
+    <div class="row">
+        <div class="col-lg-6 product-card mt-5" style="display: flex; justify-content: center;">
+                <div class="card shadow mt-3 mx-auto" style="width: 22rem;">
+                    <img class="img" style="height: 15em;" src="<%=foundProduct.img%>" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                      <h3 class="card-title"> <%= foundProduct.name %> </h3>
+                      <h5 class="card-title"> Rs: <%= foundProduct.price %> </h5>
+                      <p class="card-text"> <%= foundProduct.desc %> </p>
+                      <a href="/cart" class="btn btn-secondary">Add to Cart</a>
+                      <!-- <a href="/products/<%=foundProduct._id%>/edit" class="btn btn-info">Edit</a> -->
+                      <!-- <form class="d-inline-block" action="/products/<%=foundProduct._id%>?_method=DELETE" method="POST">
+                          <button class="btn btn-danger btn-sm">Delete</button>
+                       </form> -->
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include('./partials/footer') %>

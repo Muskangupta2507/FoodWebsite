@@ -1,46 +1,206 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('./partials/header') %>
+<%- include('./partials/navbar') %>
+<%- include('./partials/hero') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- about section -->
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="../images/ice.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-4 container col-xxl-8 px-4 py-5">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3" >Responsive left-aligned hero with image</h1>
+          <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+        </div>
+    </div>
+
+    <!-- services section -->
+    <div class="container px-4 py-5" id="featured-3">
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="feature col">
+            <!-- <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"> -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" outline="currentColor" class="bi bi-card-checklist align-items-center justify-content-center" viewBox="0 0 18 18">
+                    <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                    <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+                  </svg>
+            <!-- </div> -->
+            <h3 class="fs-2 text-body-emphasis">Featured title</h3>
+            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+          </div>
+          <div class="feature col">
+            <!-- <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"> -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-truck" viewBox="0 0 18 18">
+                    <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                  </svg>
+            <!-- </div> -->
+            <h3 class="fs-2 text-body-emphasis">Featured title</h3>
+            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+          </div>
+        </div>
+    </div>
+
+    <!-- menu section -->
+    <div class="container text-center">
+        <div class="row">
+          <div class="col" style="text-align:right; padding-top: 7%;">
+            <h2 style="font-family:Great Vibes,cursive; color: var(--main-color); z-index: 10;">Discover</h2>
+            <h2 style="position: relative; bottom: 30px;">OUR MENU</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum consequatur vero cupiditate natus itaque! Dicta dolore hic repellendus modi? A voluptatem tempore maiores recusandae quasi debitis cum aspernatur libero quos vitae reiciendis dolor temporibus sunt itaque enim dolores eaque sed corporis, molestias omnis illum sit facere laudantium cumque! Eos, velit!</p>
+            <a href="/home/menu" style="border: 2px solid var(--sec-color); background-color: var(--main-color); padding: 5px; text-decoration: none; color: var(--sec-color);">View Full Menu</a>
+          </div>
+          <div class="col">
+            <div class="container text-center" style="padding: 10px;">
+              <div class="row">
+                <div class="col" style="padding: 10px; position:relative; top: 2rem;">
+                  <img style="height: 15em;" src="https://images.immediate.co.uk/production/volatile/sites/30/2022/06/Grilled-courgette-halloumi-salad-with-caper-lemon-dressing-1f72685.jpg?resize=500,300" class="card-img-top" alt="...">
+                </div>
+                <div class="col" style="padding: 10px;">
+                  <img style="height: 15em;" src="https://sugarspunrun.com/wp-content/uploads/2018/05/Easy-Macaroni-Salad-Recipe-1-of-1-15-1.jpg?resize=300,300" class="card-img-top" alt="...">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col" style="padding: 10px; position: relative; top: 2rem;">
+                  <img style="height: 15em;" src="https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2019/05/Cucumber-Salad-main-1.jpg?resize=500,300" class="card-img-top" alt="...">
+                </div>
+                <div class="col" style="padding: 10px;">
+                  <img style="height: 15em;" src="https://www.themediterraneandish.com/wp-content/uploads/2023/04/Mediterranean-Salad_8.jpg?resize=300,500" class="card-img-top" alt="...">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- number up -->
+    <div class="numup" style="margin-top: 10vh;">
+        <div class="wrapper" class="card text-center">
+          <div class="container">
+            <i class="fas fa-utensils"></i>
+            <span class="num" data-val="400">000</span>
+            <span class="text">Meals Delivered</span>
+          </div>
+          <div class="container">
+            <i class="fas fa-smile-beam"></i>
+            <span class="num" data-val="150">000</span>
+            <span class="text">Happy Customers</span>
+          </div>
+          <div class="container">
+            <i class="fas fa-list"></i>
+            <span class="num" data-val="50">000</span>
+            <span class="text">Menu Items</span>
+          </div>
+          <div class="container">
+            <i class="fas fa-star"></i>
+            <span class="num" data-val="130">000</span>
+            <span class="text">Five Stars</span>
+          </div>
+        </div>
+    </div>
+
+    <!-- best seller section -->
+    <div style="padding: 2rem;">
+        <div id="ourmenu" style="text-align:center;">
+          <h2 style="font-family:Great Vibes,cursive; color: var(--main-color); z-index: 10;">Discover</h2>
+          <h2 style="position: relative; bottom: 30px;">OUR BEST SELLERS</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum consequatur vero cupiditate natus itaque! Dicta dolore hic repellendus modi? A voluptatem tempore maiores recusandae quasi debitis cum aspernatur libero quos vitae reiciendis dolor temporibus sunt itaque enim dolores eaque sed corporis, molestias omnis illum sit facere laudantium cumque! Eos, velit!</p>
+        </div>
+        <div class="row row-cols-md-4 g-4" style=" display: flex; justify-content:space-between;">
+          <div class="col">
+            <div class="card">
+              <img style="height: 15em;" src="https://images.immediate.co.uk/production/volatile/sites/30/2022/06/Grilled-courgette-halloumi-salad-with-caper-lemon-dressing-1f72685.jpg?resize=500,300" class="card-img-top" alt="...">
+              <div class="card-body" style="text-align: center;">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                <div style="color:var(--main-color); font-size: 20px; font-weight: 500; padding-bottom: 20px;">$2.5</div>
+                <a href="/cart" style="padding: 10px; text-decoration: none; color: var(--sec-color); background-color: var(--main-color);">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img style="height: 15em;" src="https://sugarspunrun.com/wp-content/uploads/2018/05/Easy-Macaroni-Salad-Recipe-1-of-1-15-1.jpg?resize=300,300" class="card-img-top" alt="...">
+              <div class="card-body" style="text-align: center;">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                <div style="color:var(--main-color); font-size: 20px; font-weight: 500; padding-bottom: 20px;">$2.5</div>
+                <a href="/cart" style="padding: 10px; text-decoration: none; color: var(--sec-color); background-color: var(--main-color);">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img style="height: 15em;" src="https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2019/05/Cucumber-Salad-main-1.jpg?resize=500,300" class="card-img-top" alt="...">
+              <div class="card-body" style="text-align: center;">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                <div style="color:var(--main-color); font-size: 20px; font-weight: 500; padding-bottom: 20px;">$2.5</div>
+                <a href="/cart" style="padding: 10px; text-decoration: none; color: var(--sec-color); background-color: var(--main-color);">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img style="height: 15em;" src="https://www.themediterraneandish.com/wp-content/uploads/2023/04/Mediterranean-Salad_8.jpg?resize=300,500" class="card-img-top" alt="...">
+              <div class="card-body" style="text-align: center;">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                <div style="color:var(--main-color); font-size: 20px; font-weight: 500; padding-bottom: 20px;">$2.5</div>
+                <a href="/cart" style="padding: 10px; text-decoration: none; color: var(--sec-color); background-color: var(--main-color);">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!--Reservations-->
+    <section class="text-center container">
 
 
-</head>
+        <h3 class="mb-5">Contact us</h3>
+      
+        <div class="row">
+          <div class="col-lg-5">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12094.57348593182!2d-74.00599512526003!3d40.72586666928451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598f988156a9%3A0xd54629bdf9d61d68!2sBroadway-Lafayette%20St!5e0!3m2!1spl!2spl!4v1624523797308!5m2!1spl!2spl"
+              class="h-100 w-100" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+      
+          <div class="col-lg-7">
+            <form>
+              <div class="row">
+                <div class="col-md-9">
+                  <div class="row mb-4">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1" class="form-control" />
+                        <label class="form-label" for="form3Example1">First name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4 mb-md-0">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example2" class="form-control" />
+                        <label class="form-label" for="form3Example1">Last name</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="" id="form3Example3" class="form-control" />
+                    <label class="form-label" for="form3Example3">Subject</label>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+                    <label class="form-label" for="form4Example3">Message</label>
+                  </div>
+                  <div class="text-center text-md-start">
+                    <button type="submit" class="btn btn-primary mb-5 mb-md-0">
+                      Send
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div> 
+    </section>
 
-<body>
-    <%- include('./partials/navbar') %>
-        <%- include('./partials/hero') %>
-            <%- include('./partials/about') %>
-                <%- include('./partials/feature') %>
-                    <%- include('./partials/appointment') %>
-                    <%- include('./partials/footer') %>
-                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-                            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-                            crossorigin="anonymous"></script>
-                        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-                            crossorigin="anonymous"></script>
-                        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-                            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-                            crossorigin="anonymous"></script>
-                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-                            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-                            crossorigin="anonymous"></script>
-                        <!-- MDB -->
-                        <script type="text/javascript"
-                            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
-</body>
-
-</html>
+    <!--Footer-->
+    <%- include('./partials/footer') %>

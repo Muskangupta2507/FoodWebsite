@@ -19,6 +19,10 @@ let productSchema = new mongoose.Schema({
     desc:{
         type: String,
         trim:true
+    },
+    type:{
+        type: String,
+        trim:true
     }
 });
 

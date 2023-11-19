@@ -1,0 +1,87 @@
+:root{
+  --main-color: orange;
+  --sec-color: white;
+  --prim-color:black;
+  --addi-color:#e0e0e0;
+}
+  body{
+    background-color: var(--prim-color);
+  }
+  .numup{
+    background-color: var(--sec-color);
+    padding:0;
+    margin-top: 10vh;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  .numup .wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    display: flex;
+    justify-content: space-around;
+  }
+  .numup .wrapper .container {
+    width: 28vmin;
+    height: 28vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em 0;
+    position: relative;
+    font-size: 16px;
+    border: .2px solid var(--main-color);
+  }
+  .numup .wrapper .container i {
+    color: var(--main-color);
+    font-size: 2.5em;
+    text-align: center;
+  }
+  .numup .wrapper .container span.num {
+    color: var(--prim-color);
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 3em;
+  }
+  .numup .wrapper .container span.text {
+    color: var(--addi-color);
+    font-size: 1em;
+    text-align: center;
+    pad: 0.7em 0;
+    font-weight: 400;
+    line-height: 0;
+  }
+  @media screen and (max-width: 1024px) {
+    .numup .wrapper {
+      width: 85vw;
+    }
+    .numup .wrapper .container {
+      height: 26vmin;
+      width: 26vmin;
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .numup .wrapper {
+      width: 90vw;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .numup .wrapper .container {
+      width: calc(50% - 40px);
+      height: 30vmin;
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .numup .wrapper {
+      gap: 15px;
+    }
+    .numup .wrapper .container {
+      width: 100%;
+      height: 25vmin;
+      font-size: 8px;
+    }
+  }
