@@ -1,4 +1,4 @@
-// const { ObjectId } = require('mongodb');
+const { ObjectId } = require('mongodb');
 const mongoose = require('mongoose');
 
 let productSchema = new mongoose.Schema({
@@ -23,7 +23,13 @@ let productSchema = new mongoose.Schema({
     type:{
         type: String,
         trim:true
-    }
+    },
+    reviews:[
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref:'Review'
+        }
+    ]
 });
 
 let Product = mongoose.model('Product', productSchema);
