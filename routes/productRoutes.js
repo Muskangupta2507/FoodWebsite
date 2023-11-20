@@ -1,5 +1,6 @@
 const express = require('express');
 const Product = require('../model/Product');
+const Review = require('../model/Review');
 const router = express.Router();
 
 router.get('/home' , async (req,res)=>{
@@ -23,7 +24,7 @@ router.get('/appointment',(req,res)=>{
 
 router.get('/products/:id' , async(req,res)=>{
     let {id} = req.params;
-    let foundProduct = await Product.findById(id);
+    let foundProduct = await Product.findById(id).populate('reviews');
     res.render('show' , {foundProduct})
 
 })

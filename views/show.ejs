@@ -1,25 +1,65 @@
 <%- include('./partials/header') %>
 <%- include('./partials/navbar') %>
 
-<div class="row">
-    <div class="row">
-        <div class="col-lg-6 product-card mt-5" style="display: flex; justify-content: center;">
-                <div class="card shadow mt-3 mx-auto" style="width: 22rem;">
-                    <img class="img" style="height: 15em;" src="<%=foundProduct.img%>" class="card-img-top" alt="...">
-                    <div class="card-body text-center">
-                      <h3 class="card-title"> <%= foundProduct.name %> </h3>
-                      <h5 class="card-title"> Rs: <%= foundProduct.price %> </h5>
-                      <p class="card-text"> <%= foundProduct.desc %> </p>
-                      <a href="/cart" class="btn btn-secondary">Add to Cart</a>
-                      <!-- <a href="/products/<%=foundProduct._id%>/edit" class="btn btn-info">Edit</a> -->
-                      <!-- <form class="d-inline-block" action="/products/<%=foundProduct._id%>?_method=DELETE" method="POST">
-                          <button class="btn btn-danger btn-sm">Delete</button>
-                       </form> -->
-                    </div>
+<div class="row d-flex flex-row" style="padding:20px; display: flex; align-items: center;">
+    <div class="col p-2" style=" min-width:300px;">
+        <div class="product-card" style="display: flex; justify-content: center;">
+            <div class="card shadow mt-3 mx-auto" style="width: 22rem;">
+                <img class="img" style="height: 15em;" src="<%=foundProduct.img%>" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <h3 class="card-title"> <%= foundProduct.name %> </h3>
+                  <h5 class="card-title"> Rs: <%= foundProduct.price %> </h5>
+                  <p class="card-text"> <%= foundProduct.desc %> </p>
+                  <a href="/cart" class="btn btn-secondary">Add to Cart</a>
+                  <!-- <a href="/products/<%=foundProduct._id%>/edit" class="btn btn-info">Edit</a> -->
+                  <!-- <form class="d-inline-block" action="/products/<%=foundProduct._id%>?_method=DELETE" method="POST">
+                      <button class="btn btn-danger btn-sm">Delete</button>
+                   </form> -->
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="col p-2">
+        <div class="row">
+            <div class="col" style=" min-width:300px;">
+                <form action="/products/<%= foundProduct._id %>/review" method="POST">
+                    <fieldset class="fieldset">
+                        <h3>Leave your review</h3>
+                        <br><br>
+                        <label class="form-label" for="comment">Rating: </label><br>
+                        <input type="radio" id="first-rate1" name="rating" checked value="1" />
+                        <label for="first-rate1" title="Terrible">1 star</label>
+                        <input type="radio" id="first-rate2" name="rating" value="2" />
+                        <label for="first-rate2" title="Not good">2 stars</label>
+                        <input type="radio" id="first-rate3" name="rating" value="3" />
+                        <label for="first-rate3" title="Average">3 stars</label>
+                        <input type="radio" id="first-rate4" name="rating" value="4" />
+                        <label for="first-rate4" title="Very good">4 stars</label>
+                        <input type="radio" id="first-rate5" name="rating" value="5" />
+                        <label for="first-rate5" title="Amazing">5 stars</label><br><br>
+                        
+                        <label class="form-label" for="comment">Comment: </label>
+                        <textarea class="form-control" name="comment" id="comment" rows="3"></textarea><br>
+                    
+                        <button class="btn btn-sm btn-success">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col scroll" style=" min-width:300px;">
+                <h3>Related Comments</h3><br><br>
+                <% for (let review of foundProduct.reviews){%>
+                <div>
+                    <h5>Person 1</h5><hr>
+                    <p class="starability-result" data-rating="<%=review.rating %>">
+                    Rated: <%=review.rating %> stars
+                    </p>
+                    <!-- <h1>Rating: <%=review.rating %></h1> -->
+                    <p>Comment: <%=review.comment %></p>
+                </div>
+                <%}%>
+            </div>
         </div>
     </div>
 </div>
-
 
 <%- include('./partials/footer') %>
