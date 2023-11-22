@@ -16,6 +16,8 @@
     "method-override": "^3.0.0",
     "mongodb": "^6.3.0",
     "mongoose": "^8.0.1",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "react": "^18.2.0",
+    "react-router-dom": "^6.19.0"
   }
 }
