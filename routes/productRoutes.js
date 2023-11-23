@@ -1,5 +1,7 @@
 const express = require('express');
+const app=express();
 const Product = require('../model/Product');
+const LogInCollection = require("../model/Login")
 const Review = require('../model/Review');
 const router = express.Router();
 
@@ -29,9 +31,81 @@ router.get('/products/:id' , async(req,res)=>{
 
 })
 
-router.get('/home/login',(req,res)=>{
+router.get('/login',(req,res)=>{
     res.render('login')
 });
+
+router.get('/signup', (req, res) => {
+    res.render('signup')
+})
+app.get('/', (req, res) => {
+    res.render('login')
+})
+
+
+
+// app.get('/home', (req, res) => {
+//     res.render('home')
+// })
+
+router.post('/signup', async (req, res) => {
+    
+    const data = new LogInCollection({
+        name: req.body.name,
+        password: req.body.password
+    })
+    await data.save()
+
+    // const data = {
+    //     name: req.body.name,
+    //     password: req.body.password
+    // }
+
+    const checking = await LogInCollection.findOne({ name: req.body.name })
+
+   try{
+    if (checking.name === req.body.name && checking.password===req.body.password) {
+        res.send("user details already exists")
+    }
+    else{
+        await LogInCollection.insertMany([data])
+    }
+   }
+   catch{
+    res.send("wrong inputs")
+   }
+
+    res.status(201).render("home", {
+        naming: req.body.name
+    })
+})
+
+
+router.post('/login', async (req, res) => {
+
+    try {
+        const check = await LogInCollection.findOne({ name: req.body.name })
+
+        if (check.password === req.body.password) {
+            res.status(201).render("home", { naming: `${req.body.password}+${req.body.name}` })
+        }
+
+        else {
+            res.send("incorrect password")
+        }
+
+
+    } 
+    
+    catch (e) {
+
+        res.send("wrong details")
+        
+
+    }
+
+
+})
 
 router.get('/cart',(req,res)=>{
     res.render('cart')
