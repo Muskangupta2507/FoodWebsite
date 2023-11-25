@@ -86,7 +86,7 @@ router.post('/signup', async (req, res) => {
 })
 
 
-router.post('/login', async (req, res) => {
+app.post('/login', async (req, res) => {
 
     try {
         const check = await LogInCollection.findOne({ name: req.body.name })
