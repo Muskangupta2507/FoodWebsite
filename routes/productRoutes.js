@@ -4,6 +4,7 @@ const Product = require('../model/Product');
 const LogInCollection = require("../model/Login")
 const Review = require('../model/Review');
 const router = express.Router();
+const Cart = require('../model/Cart')
 // const start=require('../views/start');
 
 router.get('/' , async (req,res)=>{
@@ -113,7 +114,7 @@ router.post('/login', async (req, res) => {
 })
 
 router.get('/cart',(req,res)=>{
-    res.render('cart')
+    res.render('cart',{cart:Cart.getCart()})
 });
 
 module.exports = router;

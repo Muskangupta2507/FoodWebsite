@@ -6,6 +6,7 @@ const seedDB = require('./seed');
 const app= express();
 const productRoutes= require('./routes/productRoutes');
 const reviewRoutes= require('./routes/reviewRoutes');
+const cartRoutes= require('./routes/cartRoutes')
 const methodOverride = require('method-override');
 
 // seedDB()
@@ -20,6 +21,7 @@ app.use('/',express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(productRoutes);
 app.use(reviewRoutes);
+app.use(cartRoutes);
 
 
 app.listen(8080, ()=>{
