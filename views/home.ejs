@@ -155,52 +155,65 @@
     <section class="text-center container">
 
 
-        <h3 class="mt-5 mb-5">BOOK A TABLE</h3>
-      
-        <div class="row">
-          <div class="col-lg-5">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12094.57348593182!2d-74.00599512526003!3d40.72586666928451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598f988156a9%3A0xd54629bdf9d61d68!2sBroadway-Lafayette%20St!5e0!3m2!1spl!2spl!4v1624523797308!5m2!1spl!2spl"
-              class="h-100 w-100" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          </div>
-      
-          <div class="col-lg-7">
-            <form>
-              <div class="row">
-                <div class="col-md-9">
-                  <div class="row mb-4">
-                    <div class="col-md-6 mb-4 mb-md-0">
-                      <div class="form-outline">
-                        <input type="text" id="form3Example1" class="form-control" />
-                        <label class="form-label" for="form3Example1">First name</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6 mb-4 mb-md-0">
-                      <div class="form-outline">
-                        <input type="text" id="form3Example2" class="form-control" />
-                        <label class="form-label" for="form3Example1">Last name</label>
-                      </div>
+      <h1 class="mb-5" style="margin-top: 20px; font-size: 3.5em;">Reserve Your Seat!!</h1>
+    
+      <div class="row">
+        <div class="col-lg-5">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12094.57348593182!2d-74.00599512526003!3d40.72586666928451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598f988156a9%3A0xd54629bdf9d61d68!2sBroadway-Lafayette%20St!5e0!3m2!1spl!2spl!4v1624523797308!5m2!1spl!2spl"
+            class="h-100 w-100" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    
+        <div class="col-lg-7">
+          <form enctype="text/plain">
+            <div class="row">
+              <div class="col-md-9" >
+                <div class="row mb-4">
+                  <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="form-outline">
+                      <input type="text"  id="form3Example1" class="form-control" />
+                      <label class="form-label" for="form3Example1">First name</label>
                     </div>
                   </div>
-                  <div class="form-outline mb-4">
-                    <input type="datetime" id="form3Example3" class="form-control" />
-                    <label class="form-label" for="form3Example3">Date</label>
-                  </div>
-                  <div class="form-outline mb-4">
-                    <textarea class="form-control" id="form4Example3" rows="4"></textarea>
-                    <label class="form-label" for="form4Example3">Message</label>
-                  </div>
-                  <div class="text-center text-md-start">
-                    <button type="submit" class="btn btn-primary mb-5 mb-md-0">
-                     Appointment
-                    </button>
+                  <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="form-outline">
+                      <input type="text" id="form3Example2" class="form-control" />
+                      <label class="form-label" for="form3Example1">Last name</label>
+                    </div>
                   </div>
                 </div>
+                <div class="form-outline mb-4">
+                  <input type="date" id="form5Example4" class="form-control" />
+                  <label class="form-label" for="form3Example3">Date</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="time" id="form6Example3" class="form-control"/>
+                  <label class="form-label" for="form3Example3">Time</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <textarea class="form-control" id="form7Example3" rows="4"></textarea>
+                  <label class="form-label" for="form4Example3">Message</label>
+                </div>
+                <div class="text-center text-md-start">
+                  <button type="submit" onclick="sendMail()" class="btn btn-primary mb-5 mb-md-0">
+                    Book Yor Seat !!
+                  </button>
+                </div>
               </div>
-            </form>
-          </div>
-        </div> 
+            </div>
+          </form>
+        </div>
+      </div>
     </section>
+    <script>
+      function sendMail() {
+      var fname = $('#form3Example1').val();
+      var lname = $('#form3Example2').val();
+      var date = $('#form5Example4').val();
+      var time = $('#form6Example3').val();
+      var message = $('#form7Example3').val();
+      window.location.href = 'mailto:muskangoyal170303@gmail.com?subject=New Reservation Recived&body=Customer Details%0AFirst Name - '+fname+'%0ALast Name - '+lname+'%0A'+'Date - '+date+'%0A'+'Time - '+time+'%0A'+'Message => %0A'+message;};
+    </script>
 
     <!--Footer-->
     <%- include('./partials/footer') %>

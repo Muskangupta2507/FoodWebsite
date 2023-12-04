@@ -13,13 +13,13 @@
       </div>
   
       <div class="col-lg-7">
-        <form>
+        <form enctype="text/plain">
           <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-9" >
               <div class="row mb-4">
                 <div class="col-md-6 mb-4 mb-md-0">
                   <div class="form-outline">
-                    <input type="text" id="form3Example1" class="form-control" />
+                    <input type="text"  id="form3Example1" class="form-control" />
                     <label class="form-label" for="form3Example1">First name</label>
                   </div>
                 </div>
@@ -31,19 +31,19 @@
                 </div>
               </div>
               <div class="form-outline mb-4">
-                <input type="datetime" id="form3Example3" class="form-control" />
+                <input type="date" id="form5Example4" class="form-control" />
                 <label class="form-label" for="form3Example3">Date</label>
               </div>
               <div class="form-outline mb-4">
-                <input type="datetime" id="form3Example3" class="form-control" />
+                <input type="time" id="form6Example3" class="form-control"/>
                 <label class="form-label" for="form3Example3">Time</label>
               </div>
               <div class="form-outline mb-4">
-                <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+                <textarea class="form-control" id="form7Example3" rows="4"></textarea>
                 <label class="form-label" for="form4Example3">Message</label>
               </div>
               <div class="text-center text-md-start">
-                <button type="submit" class="btn btn-primary mb-5 mb-md-0">
+                <button type="submit" onclick="sendMail()" class="btn btn-primary mb-5 mb-md-0">
                   Book Yor Seat !!
                 </button>
               </div>
@@ -53,4 +53,13 @@
       </div>
     </div>
   </section>
+  <script>
+    function sendMail() {
+    var fname = $('#form3Example1').val();
+    var lname = $('#form3Example2').val();
+    var date = $('#form5Example4').val();
+    var time = $('#form6Example3').val();
+    var message = $('#form7Example3').val();
+    window.location.href = 'mailto:muskangoyal170303@gmail.com?subject=New Reservation Recived&body=Customer Details%0AFirst Name - '+fname+'%0ALast Name - '+lname+'%0A'+'Date - '+date+'%0A'+'Time - '+time+'%0A'+'Message => %0A'+message;};
+  </script>
   <%- include('./footer') %>

@@ -14,7 +14,7 @@ router.post('/register',async (req,res)=>{
     let newuser=new User({username,email});
     let tt=await User.register(newuser,password);
     currUser.new(newuser)
-    res.send(tt); 
+    res.render('login')
 })
 router.get('/login',(req,res)=>{
     res.render('login')
