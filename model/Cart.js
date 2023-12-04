@@ -2,16 +2,6 @@ const { ObjectId } = require('mongodb');
 const mongoose = require('mongoose');
 const productId = require('../model/Product')
 
-// let cartSchema = new mongoose.Schema({
-//     products:[
-//         {
-//             type: mongoose.Schema.Types.ObjectId,
-//             ref:'Product'
-//         }
-//     ]
-// });
-
-// let Cart = mongoose.model('Cart', cartSchema);
 let cart=null;
 
 module.exports = class Cart {
